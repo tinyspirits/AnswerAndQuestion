@@ -4,7 +4,7 @@ const dataObjectExample = {
     3: "Nếu chỉ có một que diêm, trong một ngày mùa đông giá rét, bạn bước vào căn phòng có một cây đèn, một bếp dầu, và một bếp củi, bạn thắp gì trước tiên?",
     4: "Cái gì đen khi bạn mua nó, đỏ khi dùng nó và xám xịt khi vứt nó đi?",
     5: "Số nào tiếp theo của dãy: 1, 1, 2, 3, 5, 8, 13, 21,...",
-    6: "Số tiếp theo trong dãy: 5, 16, 49, 104,... ?",
+    6: "Số tiếp theo trong dãy: 5, 16, 49, 104,...",
     7: "Tìm số tự nhiên khi nhân với 3 và trừ đi 2 thì bằng số đảo ngược của chính nó?",
     8: "Có một đàn vịt, cho biết 1 con đi trước thì có 2 con đi sau, 1 con đi sau thì có 2 con đi trước, 1 con đi giữa thì có 2 con đi 2 bên. Hỏi đàn vịt đó có mấy con?",
     9: "Sở thú bị cháy, con gì chạy ra đầu tiên?",
@@ -66,7 +66,7 @@ function showData(index) {
 const d = new Date();
 
 if (localStorage.getItem("countDown") === null || localStorage.getItem("countDown") <= 0) {
-    d.setSeconds(300 + d.getSeconds());
+    d.setSeconds(540 + d.getSeconds());
     var countDownDate = d.getTime();
     localStorage.setItem("countDown", countDownDate);
 }
@@ -87,6 +87,8 @@ var x = setInterval(function () {
         document.getElementById("demo").innerHTML = minutes + ":" + seconds;
     }
     if (distance < 0) {
+        document.getElementById("demo").innerHTML = "Hết giờ!!!";
+        alert("Hết giờ!!!");
         submit();
     }
 }, 500);
@@ -210,10 +212,11 @@ function clickButton() {
 function submit() {
     checkAnswer();
     localStorage.setItem("countDown", 0);
+    document.getElementById("show-point").innerHTML = "Điểm:";
     document.getElementById("demo").innerHTML = localStorage.getItem("point") * 10;
+    alert("Điểm của bạn là: " + (localStorage.getItem("point") * 10));
     localStorage.setItem("point", 0);
     clearInterval(x);
-    document.getElementById("show-point").innerHTML = "Điểm:";
     document.getElementById("button-submit").disabled = true;
     buttonPrevious.disabled = true;
     buttonNext.disabled = true;
