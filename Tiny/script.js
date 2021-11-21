@@ -168,7 +168,7 @@ function checkCheckbox() {
     for (let i = 0; i < size; i++) {
         var checkColor = doneCheck[i];
         if (checkColor.length < 1) {
-            btns[i].className = btns[i].className.replace(" done", "");
+            btns[i].className = btns[i].className.replaceAll(" done", "");
         } else { btns[i].className += " done"; }
     }
 }
