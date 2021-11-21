@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Answer and question</title>
+</head>
+
+<body onload="loadData()">
+    <header>
+        <h1>Trắc nghiệm vui</h1>
+    </header>
+    <div id="form-answer-and-question">
+        <div id="question-boder">
+            <h4>Danh sách câu hỏi</h4>
+            <div class="pagination">
+                <a class="list-question active">1</a>
+                <a class="list-question">2</a>
+                <a class="list-question">3</a>
+                <a class="list-question">4</a>
+                <a class="list-question">5</a>
+                <a class="list-question">6</a>
+                <a class="list-question">7</a>
+                <a class="list-question">8</a>
+                <a class="list-question">9</a>
+                <a class="list-question">10</a>
+            </div>
+            <button id="reload" class="button-click" onclick="window.location.reload();">Làm lại bài thi</button>
+
+        </div>
+        <div id="question">
+            <h3>Câu hỏi trắc nghiệm:</h3>
+            <!-- <button class="button-click" id="start" onclick="start()">Bắt đầu làm bài</button>   Đang update  -->
+            <hr />
+            <div id="question-answer" class="question-and-answer">
+                <!-- <h3 id="example">Câu hỏi mẫu</h3> Đang update -->
+                <h4>Câu <b id="keyQuestion"></b>: <b id="valueQuestion"></b></h4>
+                <label class="question"><b class="answer">answer</b>
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="question"><b class="answer">answer</b>
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="question"><b class="answer">answer</b>
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="question"><b class="answer">answer</b>
+                    <input class="checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <button class="button-click" id="button-previous" onclick="previous()"">Câu trước</button>
+                <button class=" button-click" id="button-next" onclick="next()">Câu sau</button>
+                <button class="button-click" id="button-submit" onclick="submit()">Nộp bài</button>
+            </div>
+        </div>
+        <div id="time">
+            <h2 id="show-point">Thời gian: </h2>
+            <h2 id="demo">5:00</h2>
+            <div id="intro">
+                <h2>Hướng dẫn làm bài:</h2>
+                <p> - Đề thi gồm có 10 câu hỏi (mỗi câu hỏi có 04 phương án trả lời có thể chọn 1 hoặc nhiều đáp
+                    án).Thời gian làm bài thi là <b>5 phút </b> <i>(thí sinh có thể thay đổi phương án trả lời khi chưa
+                        nộp bài).</i>
+                </p>
+                <p>- Để xác nhận câu trả lời thí sinh ấn vào <b><u>Câu trước</u></b> hoặc <b><u>Câu sau</u></b> để xác
+                    nhận.</p>
+                <p>- Câu hỏi nào đã được thí sinh trả lời, sẽ chuyển sang màu xanh bên cột <b>Danh sách câu hỏi.</b></p>
+                <p>- Thí sinh có thể nộp bài trước khi hết thời gian làm bài bằng cách ấn vào nút Nộp bài.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
