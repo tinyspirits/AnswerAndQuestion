@@ -43,7 +43,10 @@ header h1 {
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   box-shadow: 5px 6px rgba(185, 148, 148, 0.3);
+  position: relative;
+  /* align-content: center; */
 }
 
 #question-boder h4 {
@@ -59,10 +62,12 @@ header h1 {
   transition: background-color 0.3s;
   cursor: pointer;
   user-select: none;
-  margin: auto;
+  /* margin: auto; */
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 20px;
+  margin-bottom: 3px;
 }
 
 .pagination a.active {
@@ -178,9 +183,11 @@ header h1 {
 }
 
 #reload {
+  position: relative;
   display: none;
   text-align: center;
   margin: 5% auto;
+  z-index: 99;
 }
 
 .button-click {

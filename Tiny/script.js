@@ -218,6 +218,7 @@ function submit() {
     buttonPrevious.disabled = true;
     buttonNext.disabled = true;
     document.getElementById("reload").style.display = "block";
+    document.getElementById("pagination").style.zIndex = -1;
     localStorage.clear();
 
 }
