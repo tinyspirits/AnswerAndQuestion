@@ -88,7 +88,6 @@ header h1 {
 #question {
   border: 2px solid rgb(151, 130, 130);
   display: inline-block;
-  grid-area: main;
   width: 50%;
   border-radius: 1%;
   box-shadow: 5px 6px rgba(185, 148, 148, 0.3);
